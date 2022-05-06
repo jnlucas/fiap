@@ -1,0 +1,21 @@
+#sessao{
+    border: solid blue 1px; /*ordem numero 2 */
+}
+.sessao{
+    border: solid yellow 1px;/*ordem numero 3 */
+}
+
+section{
+    border: solid gray 1px;/*ordem numero 4 */
+}
+
+
+.col-md-4{
+    margin-top: 10px
+}
+
+
+.modal-dialog {
+    max-width: 75%;
+    margin: 1.75rem auto;
+}
