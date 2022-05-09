@@ -25,11 +25,11 @@ function tratarDados(dados){
         
        let conteudo = `<div class="col-md-4">
                 <div class="card" >
-                    <img src="${valor.imagem}" class="card-img-top" onclick="abrirModal()" alt="tertertert">
+                    <img src="${valor.imagem}" class="card-img-top" onclick="abrirModal('${valor.nome}','${valor.imagem}','${valor.descricao}')" alt="tertertert">
                     <div class="card-body">
                     <h5 class="card-title">${valor.nome}</h5>
                     <p class="card-text">${valor.descricao}</p>
-                    <button type="button" class="btn btn-primary abrirModal" onclick="abrirModal('${valor.nome}')" >
+                    <button type="button" class="btn btn-primary abrirModal" onclick="abrirModal('${valor.nome}','${valor.imagem}','${valor.descricao}')" >
                         Detalhes
                     </button>
 
@@ -46,15 +46,15 @@ function tratarDados(dados){
 
 }
 
+function abrirModal(nomeVariavel,imagemTeste,descricaoNaoSei){
 
-function abrirModal(id){
-
+    
     let conteudo = `<div class="col-md-12">
                 <div class="card" >
-                    <img src="" class="card-img-top"  alt="tertertert">
+                    <img src="${imagemTeste}" class="card-img-top"  alt="tertertert">
                     <div class="card-body">
-                    <h5 class="card-title">nome</h5>
-                    <p class="card-text">descricao</p>
+                    <h5 class="card-title">${nomeVariavel}</h5>
+                    <p class="card-text">${descricaoNaoSei}</p>
                 </div>
                 </div>
             </div>`;
