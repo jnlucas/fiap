@@ -25,11 +25,11 @@ function tratarDados(dados){
         
        let conteudo = `<div class="col-md-4">
                 <div class="card" >
-                    <img src="${valor.imagem}" class="card-img-top" onclick="abrirModal()" alt="tertertert">
+                    <img src="${valor.imagem}" class="card-img-top" onclick="abrirModal('${valor.nome}' , '${valor.imagem}','${ valor.descricao}' )" alt="tertertert">
                     <div class="card-body">
                     <h5 class="card-title">${valor.nome}</h5>
                     <p class="card-text">${valor.descricao}</p>
-                    <button type="button" class="btn btn-primary abrirModal" onclick="abrirModal('${valor.nome}')" >
+                    <button type="button" class="btn btn-primary " onclick="abrirModal( '${valor.nome}' ,'${valor.imagem}','${ valor.descricao}' )">
                         Detalhes
                     </button>
 
@@ -47,14 +47,15 @@ function tratarDados(dados){
 }
 
 
-function abrirModal(id){
+function abrirModal( nome ,imagem ,descricao ){
+    console.log(nome,imagem ,descricao)
 
-    let conteudo = `<div class="col-md-12">
+    let conteudo = `<div class="col-md-12">cv   
                 <div class="card" >
-                    <img src="" class="card-img-top"  alt="tertertert">
+                    <img src= "${imagem}"  class="card-img-top"  alt="tertertert">
                     <div class="card-body">
-                    <h5 class="card-title">nome</h5>
-                    <p class="card-text">descricao</p>
+                    <h5 class="card-title">${nome}</h5>
+                    <p class="card-text">${descricao}</p>
                 </div>
                 </div>
             </div>`;
