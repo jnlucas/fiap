@@ -14,8 +14,7 @@ section{
     margin-top: 10px
 }
 
-
 .modal-dialog {
-    max-width: 75%;
+    /* max-width: 75%; */
     margin: 1.75rem auto;
 }
