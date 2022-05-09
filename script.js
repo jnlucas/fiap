@@ -67,8 +67,9 @@ function abrirModal( nome ,imagem ,descricao ){
 }
 // resolvendo bugs
 
+
 $(function(){
     pegaDados();
 })
-
+// testes de coomits e push
 
