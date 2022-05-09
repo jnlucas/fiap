@@ -21,7 +21,7 @@ function tratarDados(dados) {
                     <div class="card-body">
                         <h5 class="card-title">${valor.nome}</h5>a
                         <p class="card-text">${valor.descricao}</p>
-                        <button type="button" class="btn btn-primary abrirModal" onclick="abrirModal('${valor.imagem}','${valor.nome}','${valor.descricao}')" >
+                        <button type="button" class="btn btn-primary" onclick="abrirModal('${valor.imagem}','${valor.nome}','${valor.descricao}')" >
                             Detalhes
                         </button>
                     </div>
