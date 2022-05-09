@@ -65,7 +65,7 @@ function abrirModal( nome ,imagem ,descricao ){
     $('#exampleModal').modal('show');
 
 }
-
+// resolvendo bugs
 
 $(function(){
     pegaDados();
