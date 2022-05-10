@@ -36,7 +36,7 @@ function tratarDados(retorno){
 
 
     $(retorno).each(function(chave,valor){ //laço que se repete 3 vezez
-        let conteudo = `<tr onclick="abrirModal('${valor.nome}','${valor.descricao}','${valor.imagem}')" >
+        let conteudo = `<tr class="abrirModal" lucas='${JSON.stringify(valor)}' >
         <td>${valor.id}</td>
         <td><img class="foto" src="${valor.imagem}" />  </td>
         <td>${valor.nome}</td>
@@ -107,4 +107,44 @@ function abrirModal(nome,descricao,imagem){
     teste.html(conteudo);
 }
 
+
+
+function abrirModal2(valor){
+
+
+    $('#exampleModal').modal("show");
+
+   var titulo = $("#exampleModalLabel");
+   titulo.html(valor.nome);
+
+   
+   var teste = $(".modal-body");
+
+
+   let conteudo = `<div class="col-md-12">
+       <div class="card" >
+           <img src="${valor.imagem}" class="card-img-top"  alt="tertertert">
+           <div class="card-body">
+           <h5 class="card-title">${valor.nome}</h5>
+           <p class="card-text">${valor.descricao}</p>
+       </div>
+       </div>
+   </div>`;
+   
+   teste.html(conteudo);
+}
+
 carregar();
+
+$(function(){
+
+    //$('.abrirModal').click()
+    $('body').on('click','.abrirModal',function(){
+        var valor = $(this).attr('lucas')
+        valor = JSON.parse(valor);
+
+        abrirModal2(valor);
+
+    })
+
+})
