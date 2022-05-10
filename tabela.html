@@ -23,7 +23,16 @@
 
     </style>
     <div class="container" >
-        <div class="row">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-sm-4">
+          <select class="form-select" onChange="selecionaValor(this.value)" aria-label="Default select example">
+            <option selected>Selecione</option>
+          </select>
+        </div>
+      </div>  
+
+
+      <div class="row">
             <div class="col-sm-12">
                 
                 <table class="table  table-primary table-striped">
@@ -33,7 +42,6 @@
                         <th>Foto</th>
                         <th>nome</th>
                         <th>descricao</th>
-                        <th>ação</th>
                       </tr>
                     </thead>
                     <tbody class="minhaTabela">
